@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+p {
+  font-size: 14px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+header {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: block;
+  background-color: #ced6dd;
+  color: blue;
+}
+
+header ul {
+  padding: 0;
+  text-decoration: none;
+}
+
+header li {
+  display: inline-block;
+  margin: 10px;
+  font-weight: 900;
+}
+
+header nav {
+  color: hotpink;
+}
+
+header .side_menu {
+  display: none;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+main .top_categories {
+  padding-top: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 200px 200px;
+      grid-template-rows: 200px 200px;
+  gap: 20px;
+}
+
+main .top_categories div {
+  background-color: lightcoral;
+}
+
+main .top_categories .accessories {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
+}
+
+main .featured_items {
+  padding-top: 50px;
+  text-align: center;
+}
+
+main .featured_items_header h1 {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+main .featured_items .products_grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 580px 580px;
+      grid-template-rows: 580px 580px;
+  gap: 30px;
+}
+
+main .featured_items .products_grid div {
+  background-color: gray;
+}
+
+main .featured_items a {
+  display: inline-block;
+  border: 1px solid #FF6A6A;
+  margin: 10px;
+  padding: 10px;
+}
+
+main aside {
+  background-color: #222224;
+}
+
+main aside .conditions {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: 200px;
+      grid-template-rows: 200px;
+}
+
+main aside .conditions div {
+  background-color: lightcoral;
+}
+
+footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  background-color: grey;
+}
+
+footer .quote_n_subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/*# sourceMappingURL=styles.css.map */

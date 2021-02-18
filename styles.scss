@@ -1,0 +1,120 @@
+$max_width: 1140px;
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+p {
+    font-size: 14px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: $max_width;
+}
+
+header {
+    flex: 0 0 auto;
+    display: block;
+    background-color: aliceblue - #222;
+    color: blue;
+
+    ul {
+        padding: 0;
+        text-decoration: none;
+    }
+
+    li {
+        display: inline-block;
+        margin: 10px;
+        font-weight: 900;
+    }
+    nav {
+        color: hotpink;
+    }
+    .side_menu {
+        display: none;
+    }
+}
+
+main {
+    flex: 1 0 auto;
+
+    .top_categories {
+        padding-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 200px 200px;
+        gap: 20px;
+    
+        div {
+            background-color: lightcoral;
+        }
+    
+        .accessories {
+            grid-column: 1 / span 3;
+        }
+    }
+    
+    .featured_items {
+        padding-top: 50px;
+        text-align: center;
+    
+        &_header h1{
+            font-size: 2em;
+            font-weight: 500;
+        }
+        .products_grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 580px 580px;
+            gap: 30px;
+    
+            div {
+                background-color: gray;
+            }
+        }
+    
+        a {
+            display: inline-block;
+            border: 1px solid #FF6A6A;
+            margin: 10px;
+            padding: 10px;
+        }
+    }
+    
+    aside {
+        background-color: #222224;
+        .conditions{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 200px;
+    
+            div {
+                background-color: lightcoral;
+            }
+        }
+    }
+}
+
+footer {
+    flex: 0 0 auto;
+    background-color: grey;
+
+    .quote_n_subscribe {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .copyright {
+        display: flex;
+        justify-content: space-between;
+    }
+}
