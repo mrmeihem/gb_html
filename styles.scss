@@ -1,0 +1,64 @@
+$max_width: 1140px;
+$basic_color: #222222;
+$em_color: #F16D7F;
+$button_color: #FF6A6A;
+$menu_width: 232px;
+$menu_hide: 300px;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import "_reset.scss";
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    color: $basic_color;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: $max_width;
+    padding:0 10px;
+}
+
+p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: #5D5D5D;
+    margin-top: 6px;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+em {
+    color: $em_color;
+    font-style: normal;
+}
+
+@import "_header.scss";
+
+@import "_frontpage.scss";
+@import "_catalog.scss";
+
+@import "_footer.scss";
