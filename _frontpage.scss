@@ -177,6 +177,7 @@ main {
         }
 
         .button {
+            display: inline-block;
             text-decoration: none;
             background-color: white;
             border: 1px solid $button_color;
@@ -188,6 +189,7 @@ main {
         }
 
         .button:hover {
+            display: inline-block;
             text-decoration: none;
             background-color: $em_color;
             color: #FFFFFF;
