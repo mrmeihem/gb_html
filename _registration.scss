@@ -1,192 +1,207 @@
-main {
-    flex: 1 0 auto;
+.registration {
+    margin: 64px auto 96px;
+    display: flex;
+    justify-content: space-between;
 
-    .top_categories {
-        padding-top: 65px;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        gap: 30px;
-    
-        >div {
-            position: relative;
-            background-color: rgba(33, 22, 22, 0.7);
-            transition: 0.4s;
+    >div {
+        
+        .registration_adress {
+            width: 360px;
+            margin: 0 auto;
 
-            img {
-                display: block;
-                width: 100%; 
-                height: auto;
-                position: relative;
-                z-index: -100;
-            }
-
-            .cat_name {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                right: 0;
-                text-align: center;
-                width: 100%;
+            h1 {
+                font-weight: 300;
                 font-size: 16px;
                 line-height: 19px;
-                color: #FFFFFF;
+                margin-bottom: 20px;
             }
 
-            em {
-                font-weight: bold;
-                font-size: 24px;
-                line-height: 29px;
-            }
-        }
-
-        >div:hover {
-            background-color: rgba(97, 35, 35, 0);
-            transition-duration: 0.4s;
-            
-            .cat_name {
-                display: none;
-            }
-        }
-
-        .accessories {
-            grid-column: 1 / span 3;
-        }
-
-        @media (max-width: 960px) {
-                padding-top: 20px;
-                gap: 20px;
-        }
-
-        @media (max-width: 600px) {
-            display: block;
-
-            >div:first-child {
-                margin-top: 44px;
+            .infield {
+                width: 100%;
+                margin-bottom: 20px;
+                border: 1px solid #A4A4A4;
+                height: 45px;
+                outline: none;
+                box-sizing: border-box;
+                padding: 0 20px;
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 16px;
+                color: #222;
             }
 
-            >div:nth-child(-n+3) {
-                margin-bottom: 32px;
+            input:focus::placeholder {
+                color: #B1B1B1;
             }
 
-            >div:last-child {
-                height: 110px;
+            .registration_radio {
+                display: flex;
+                margin: 12px 0 32px;
 
-                img {
-                    object-fit: cover;
-                    object-position: center;
-                    height: 110px;
-                }
-            }
-        }
-    }
-
-    .featured_items {
-        padding-top: 96px;
-        text-align: center;
-    
-        &_header {
-            margin-bottom: 48px;
-        
-            h1 {
-            font-size: 2em;
-            font-weight: 500;
-            }
-        }
-        
-        .products_grid {
-            margin-bottom: 63px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px,360px));
-            justify-content: center;
-            gap: 30px;
-    
-            div {
-                background-color: #F8F8F8;
-
-                .product_img {
+                input {
+                    appearance: none;
+                  
+                    border-radius: 50%;
+                    width: 17px;
+                    height: 17px;
+                  
+                    border: 1px solid #A4A4A4;
+                    transition: 0.3s;
+                    margin-right: 10px;
+                  
                     position: relative;
+                    top: -2px;
+                }
+                  
+                input:checked {
+                    border: 6px solid $em_color;
+                }
 
-                    img {
-                        height: 420px;
-                        width: 100%;
-                        object-fit: cover;
-                        object-position: center;
-                    }
-
-                    .product_overlay {
-                        opacity: 0;
-                        transition-duration: 0.4s;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        z-index: 100;
-                        height: 100%;
-                        width: 100%;
-                        background-color: rgba(58, 56, 56, 0.86);
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        align-items: center;
-
-                        .button {
-                            border: 1px solid white;
-                            background-color: transparent;
-                            padding: 14px 18px;
-                            font-size: 14px;
-                            line-height: 24px;
-                            color: #FFFFFF;
-                        }
-
-                        .button::before {
-                            content:url('img/add-to-cart.svg');
-                            display: inline-block;
-                            margin-right: 10px;
-                            width: auto;
-                            height: 24px;
-                            vertical-align: -30%;
-                        }
-                    }
-
-                    .product_overlay:hover {
-                        opacity: 1;
-                        transition-duration: 0.4s;
-                    }
+                label {
+                    font-weight: 300;
+                    font-size: 11px;
+                    line-height: 13px;
+                    color: #000000;
+                    margin-right: 20px;
                 }
             }
 
-            .product_description {
-                margin: 20px 30px 20px 20px;
-                text-align: left;
+            p {
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 16px;
+                color: #B1B1B1;
+                margin: -5px 0 39px;
+            }
+            
 
-                em {
-                    font-size: 16px;
-                    line-height: 19px;
+            .registration_button {
+                font-size: 14px;
+                line-height: 17px;
+                color: white;
+                background-color: $em_color;
+                border: 1px solid $em_color;
+                padding: 15px 30px;
+                box-sizing: border-box;
+                transition: 0.4s;
+
+                svg {
+                    margin-left: 20px;
+                    fill: white;
+                }
+            }
+
+            .registration_button:hover {
+                background-color: white;
+                color: $em_color;
+                cursor: pointer;
+                transition: 0.4s;
+
+                svg {
+                    fill: $em_color;
                 }
             }
         }
 
-        .button {
-            text-decoration: none;
-            background-color: white;
-            border: 1px solid $button_color;
-            padding: 15px 40px;
-            font-size: 16px;
-            line-height: 19px;
-            color: #F26376;
-            transition: 0.4s;
+        .registration_text_block {
+            flex-grow: 1;
+
+            div {
+                margin: 0 0 0 15%;
+
+                h1 {
+                    font-weight: 300;
+                    font-size: 24px;
+                    line-height: 29px;
+                    margin-bottom: 22px;
+                }
+
+                p {
+                    font-weight: 300;
+                    font-size: 24px;
+                    line-height: 29px;
+                    color: #000000;
+                    margin-bottom: 22px;
+                }
+
+                ul {
+                    list-style: none;
+                    font-weight: 300;
+                    font-size: 24px;
+                    line-height: 29px;
+                    padding: 0;
+
+                    li {
+                        margin-bottom: 16px;
+                    }
+
+                    li:before {
+                        content: url('img/V.svg');
+                        margin-right: 10px;
+                        display: inline-block;
+                    }
+                }
+            }
         }
 
-        .button:hover {
-            text-decoration: none;
-            background-color: $em_color;
-            color: #FFFFFF;
-            transition: 0.4s;
+        @media (max-width: 1140px) {
+            .registration_text_block {
+                flex-grow: 0;
+                div {
+                    margin: 0 0 0 10%;
+                }
+            }
         }
- 
-    }
+
+        @media (max-width: 990px) {
+            .registration_text_block {
     
-    @import "_aside.scss";
+                div {
+                    margin: 0 0 0 22px;
+    
+                    h1 {
+                        font-size: 16px;
+                        line-height: 19px;
+                        margin-bottom: 32px;
+                    }
+    
+                    p {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+    
+                    ul {
+                        font-size: 16px;
+                        line-height: 19px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .registration {
+        flex-direction: column;
+        margin: 40px auto 96px;
+
+        >div {
+        
+            .registration_adress {
+                max-width: 360px;
+                width: 100%;
+                margin-bottom: 40px;
+            }
+    
+            .registration_text_block {
+                flex-grow: 1;
+    
+                div {
+                    margin: 0 auto;
+                    max-width: 360px;
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
