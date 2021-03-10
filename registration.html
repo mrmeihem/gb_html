@@ -91,10 +91,10 @@
                         <h1>Your Name</h1>
                         <form action="">
                             <label for="">
-                                <input class="infield" type="text" placeholder="First Name">
+                                <input class="infield" type="text" placeholder="First Name" pattern="/[^A-Fa-f]+/i">
                             </label>
                             <label for="">
-                                <input class="infield" type="text" placeholder="Last Name">
+                                <input class="infield" type="text" placeholder="Last Name" pattern="/[^A-Fa-f]+/i">
                             </label>
                             <div class="registration_radio">
                                 <input class="radio" type="radio" id="male" name="gender" value="male">
@@ -106,7 +106,8 @@
                             </div>
                             <h1>Login details</h1>
                             <label for="">
-                                <input class="infield" type="email" placeholder="Email">
+                                <input class="infield" type="email" placeholder="Email"
+                                    pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}">
                             </label>
                             <label for="">
                                 <input class="infield" type="password" placeholder="Password">

@@ -15,6 +15,17 @@ header {
             list-style-type: none;
             height: 75px;
             margin: 0;
+
+            li .ham {
+                display: block;
+                transform: rotateZ(-360deg);
+                transition: 0.5s;
+            }
+
+            li .rotate_ham {
+                transform: rotateZ(360deg);
+                transition: 0.5s;
+            }
     
             li:nth-child(3) {
                 flex-grow: 1;
@@ -73,8 +84,8 @@ header {
     
     }
 
-    @import "_header_frontpage.scss";
-    @import "_header_catalog.scss";
-    @import "_header_product.scss";
+    @import "scss/_header_frontpage.scss";
+    @import "scss/_header_catalog.scss";
+    @import "scss/_header_product.scss";
 
 }

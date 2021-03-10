@@ -7,7 +7,7 @@ $menu_hide: 300px;
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-@import "_reset.scss";
+@import "scss/_reset.scss";
 
 body {
     display: flex;
@@ -15,6 +15,7 @@ body {
     height: 100vh;
     font-family: 'Lato', sans-serif;
     color: $basic_color;
+    overflow-x: hidden;
 }
 
 .mycontainer {
@@ -56,12 +57,12 @@ em {
     font-style: normal;
 }
 
-@import "_header.scss";
+@import "scss/_header.scss";
 
-@import "_frontpage.scss";
-@import "_catalog.scss";
-@import "_product.scss";
-@import "_cart.scss";
-@import "_registration.scss";
+@import "scss/_frontpage.scss";
+@import "scss/_catalog.scss";
+@import "scss/_product.scss";
+@import "scss/_cart.scss";
+@import "scss/_registration.scss";
 
-@import "_footer.scss";
+@import "scss/_footer.scss";
